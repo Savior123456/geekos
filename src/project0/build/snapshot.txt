@@ -1,0 +1,25 @@
+8192KB memory detected, 1673 pages in freelist, 1048576 bytes in kernel heap
+Initializing IDT...
+Failed assertion in Init_IDT: g_handlerSizeNoErr == g_handlerSizeErr at ../src/g
+eekos/idt.c, line 61, RA=10200, thread=0x00000000
+ß
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
