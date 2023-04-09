@@ -48,7 +48,7 @@ int g_needReschedule;
  * Boolean flag indicating that preemption is disabled.
  * When set, external interrupts (such as the timer tick)
  * will not cause a new thread to be selected.
- */
+ */ 
 volatile int g_preemptionDisabled;
 
 /*
