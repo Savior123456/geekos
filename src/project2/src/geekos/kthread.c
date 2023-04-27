@@ -637,13 +637,12 @@ void Schedule(void)
 {
     struct Kernel_Thread *runnable;
 
-    /* Make sure interrupts really are disabled */
     KASSERT(!Interrupts_Enabled());
 
-    /* Preemption should not be disabled. */
+
     KASSERT(!g_preemptionDisabled);
 
-    /* Get next thread to run from the run queue */
+    /* 从就绪队列中选择优先级最高的一个进程 */
     runnable = Get_Next_Runnable();
 
     /*
@@ -652,6 +651,7 @@ void Schedule(void)
      * will "return", and then Schedule() will return to wherever
      * it was called from.
      */
+    // 开始执行
     Switch_To_Thread(runnable);
 }
 
